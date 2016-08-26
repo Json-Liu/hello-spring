@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- ======================================================================== -->
+	<!-- Spring bootstrap config, only use this file in code should be sufficient -->
+	<!-- ======================================================================== -->
+	<context:component-scan base-package="com.yy"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<context:property-placeholder/>
+	<bean id = "initMethodDemo" class = "com.yy.di.dao.impl.InitMethodDemoImpl" >
+		<property name="user" ref="user"></property>
+	</bean>
+	<bean id = "user" class="com.yy.di.bean.User">
+		<property name="name" value="JosonLiu"></property>
+		<property name="age" value="27"></property>
+	</bean>
+	<bean id = "propertyDi" class="com.yy.di.service.impl.PropertyDiImpl" >
+		<property name = "title" value = "Test title."></property>
+		<property name = "artist" value = "JosonLiu"></property>
+		<property name = "tracks" >
+			<list>
+				<value>first track.</value>
+				<value>second track.</value>
+				<value>third track.</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 初始化AOP Bean -->
+<!-- 	<bean id="audienceAop" class="com.yy.aop.util.Audience"></bean> -->
+	<bean id="audienceAop" class="com.yy.aop.util.Audience2"></bean>
+	<context:property-placeholder/>
+	<!-- <bean id="PropertyPlaceholderConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound">
+			<value>false</value>
+		</property>
+		<property name="locations">
+			<list>
+				<value>classpath:dev.properties</value>
+				<value>classpath:environment.properties</value>
+				<value>classpath:environment2.properties</value>
+			</list>
+		</property>
+	</bean> -->
+</beans>
