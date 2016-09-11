@@ -1,11 +1,12 @@
 package com.yy.di.bean;
-/*** 通过 XML 文件的  bean 进行类的注解 
+/*** XML 文件 进行 Bean 初始化 同时进行属性初始化 与初始化后的方法调用  
  ** @Author JosonLiu
  ** @Date 2016年9月11日
  ** @Version 1.0
  **/
-public class User {
+public class UserWithInitMethod {
 	private Integer uid ;
+	private String userName ;
 	public Integer getUid() {
 		return uid;
 	}
@@ -20,8 +21,14 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", userName=" + userName + "]";
+		return "UserWithInitMethod [uid=" + uid + ", userName=" + userName
+				+ "]";
 	}
-	private String userName;
+	/**
+	 * 输出当前对象
+	 */
+	public void print(){
+		System.out.println(this);
+	}
 }
 

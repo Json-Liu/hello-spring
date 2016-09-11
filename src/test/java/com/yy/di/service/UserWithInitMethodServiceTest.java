@@ -1,25 +1,24 @@
 package com.yy.di.service;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+/***
+ ** @Author JosonLiu
+ ** @Date 2016年9月11日
+ ** @Version 1.0
+ **/
+@ContextConfiguration("classpath:spring/appContext.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
-public class CDPlayerTest {
-	private Logger log = LoggerFactory.getLogger("STDOUT");
+public class UserWithInitMethodServiceTest {
 	@Autowired
-	private  CompactDisc cd;
+	private UserWithInitMethodService userWithInitMethodService;
 	@Test
-	public void test_Not_Null(){
-		log.debug("test log");
-		assertNotNull(cd);
-		cd.play();
+	public void test(){
+		userWithInitMethodService.print();
 	}
 }
+

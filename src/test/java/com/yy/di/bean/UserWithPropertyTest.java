@@ -1,6 +1,4 @@
-package com.yy.di.service;
-
-import static org.junit.Assert.assertNotNull;
+package com.yy.di.bean;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,17 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-//@ContextConfiguration("classpath:spring/appContext.xml")
-@RunWith(SpringJUnit4ClassRunner.class)
+/***
+ ** @Author JosonLiu
+ ** @Date 2016年9月11日
+ ** @Version 1.0
+ **/
 @ContextConfiguration("classpath:spring/appContext.xml")
-public class CDPlayerXMLTest {
+@RunWith(SpringJUnit4ClassRunner.class)
+public class UserWithPropertyTest {
 	@Autowired
-	private CompactDisc cd;
-
+	private UserWithProperty userWithProperty;
 	@Test
-	public void test_Not_Null(){
-		assertNotNull(cd);
-		cd.play();
+	public void test(){
+		System.out.println(userWithProperty);
 	}
-	
 }
+

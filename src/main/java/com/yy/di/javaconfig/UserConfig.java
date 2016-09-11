@@ -1,11 +1,12 @@
-package com.yy.di.bean;
-/*** 通过 XML 文件的  bean 进行类的注解 
+package com.yy.di.javaconfig;
+/*** 通过 JAVA class 文件 进行 JAVA 实例的注解
  ** @Author JosonLiu
  ** @Date 2016年9月11日
  ** @Version 1.0
  **/
-public class User {
+public class UserConfig {
 	private Integer uid ;
+	private String userName ;
 	public Integer getUid() {
 		return uid;
 	}
@@ -20,8 +21,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", userName=" + userName + "]";
+		return "UserConfig [uid=" + uid + ", userName=" + userName + "]";
 	}
-	private String userName;
 }
 

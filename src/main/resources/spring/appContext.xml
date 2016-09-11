@@ -16,35 +16,5 @@
 	<!-- Spring bootstrap config, only use this file in code should be sufficient -->
 	<!-- ======================================================================== -->
 	<context:component-scan base-package="com.yy"></context:component-scan>
-		<context:property-placeholder/>
-	<bean id = "initMethodDemo" class = "com.yy.di.dao.impl.InitMethodDemoImpl" scope="prototype" >
-		<property name="user" ref="user"></property>
-	</bean>
-	<bean id = "user" class="com.yy.di.bean.User">
-		<property name="name" value="JosonLiu"></property>
-		<property name="age" value="27"></property>
-	</bean>
-	<bean id = "propertyDi" class="com.yy.di.service.impl.PropertyDiImpl" >
-		<property name = "title" value = "Test title."></property>
-		<property name = "artist" value = "JosonLiu"></property>
-		<property name = "tracks" >
-			<list>
-				<value>first track.</value>
-				<value>second track.</value>
-				<value>third track.</value>
-			</list>
-		</property>
-	</bean>
-	
-	<!-- <context:property-placeholder/> -->
-	<bean id="PropertyPlaceholderConfigurer"
-		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:dev.properties</value>
-				<value>classpath:environment.properties</value>
-				<value>classpath:environment2.properties</value>
-			</list>
-		</property>
-	</bean>
+	<context:property-placeholder/>
 </beans>
