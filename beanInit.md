@@ -1,7 +1,7 @@
 Spring Bean 初始化过程图：
 ---------------------
 ![Alt Text](https://github.com/Json-Liu/hello-spring/blob/master/bean%20init.jpg)
-文字描述：
+文字描述 ：
 ---------------------
 >* Spring 对 bean 进行实例化
 >* Spring 将值和 bean 的引用注入到 bean 对应的属性中
