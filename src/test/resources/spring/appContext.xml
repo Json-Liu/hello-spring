@@ -17,7 +17,6 @@
 	<!-- ======================================================================== -->
 	<context:component-scan base-package="com.yy"></context:component-scan>
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-	<context:property-placeholder/>
 	<bean id = "user" class = "com.yy.di.bean.User" > </bean>
 	<bean id = "userWithProperty" class = "com.yy.di.bean.UserWithProperty"  >
 		<property name="uid">
