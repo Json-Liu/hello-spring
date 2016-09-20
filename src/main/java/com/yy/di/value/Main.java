@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  ** @Date 2016年9月20日
  ** @Version 1.0
  **/
-public class InjectValueDemoTest {
+public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/appContext.xml");
 		InjectValueDemo bean = context.getBean(InjectValueDemo.class);

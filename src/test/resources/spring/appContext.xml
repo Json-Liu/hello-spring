@@ -40,4 +40,16 @@
 			<value>"JosonLiu"</value>
 		</property>
 	</bean>
+	
+	<bean id="PropertyPlaceholderConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreResourceNotFound">
+			<value>false</value>
+		</property>
+		<property name="locations">
+			<list>
+				<value>classpath:dev/dev.properties</value>
+			</list>
+		</property>
+	</bean>
 </beans>
