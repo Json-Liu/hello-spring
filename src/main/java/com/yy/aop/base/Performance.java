@@ -1,4 +1,4 @@
-package com.yy.aop.service;
+package com.yy.aop.base;
 
 public interface Performance {
 	void perform();

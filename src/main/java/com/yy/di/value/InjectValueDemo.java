@@ -3,7 +3,7 @@ package com.yy.di.value;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/***
+/*** 通过 @Value 注解进行文本值注入
  ** @Author JosonLiu
  ** @Date 2016年9月20日
  ** @Version 1.0
