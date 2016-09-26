@@ -4,7 +4,7 @@
 	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
 		<resetJUL>true</resetJUL>
 	</contextListener>
-  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
@@ -31,12 +31,7 @@
 			<pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
 		</encoder>
 	</appender>
-  <logger name="file" additivity="false">
-		<level value="DEBUG"/>
-		<appender-ref ref="FILE"/>
-  </logger>  
   <root level="DEBUG">
-    <appender-ref ref="stdout"/>
-    <appender-ref ref="file"/>
+    <appender-ref ref="STDOUT"/>
   </root>
 </configuration>
