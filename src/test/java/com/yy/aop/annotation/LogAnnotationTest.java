@@ -17,7 +17,7 @@ public class LogAnnotationTest {
 	@Autowired
 	private LogAnnotationDemo logAnnotationDemo;
 	@Test 
-	public void test(){
+	public void test(){//
 		logAnnotationDemo.print();
 		logAnnotationDemo.sayHello(" Json Liu");
 	}

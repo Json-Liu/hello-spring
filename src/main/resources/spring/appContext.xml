@@ -17,4 +17,15 @@
 	<!-- ======================================================================== -->
 	<context:component-scan base-package="com.yy"></context:component-scan>
 	<context:property-placeholder location="classpath:dev/dev.properties" />
+<!-- 	 <bean id="retryAdvice"
+    		class="org.springframework.retry.interceptor.RetryOperationsInterceptor">
+	</bean>
+	
+	<context:annotation-config />
+	<aop:aspectj-autoproxy /> -->
+	<context:annotation-config />
+
+	<aop:aspectj-autoproxy />
+
+	<bean class="org.springframework.retry.annotation.RetryConfiguration" />
 </beans>

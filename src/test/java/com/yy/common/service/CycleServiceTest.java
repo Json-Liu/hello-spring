@@ -1,4 +1,4 @@
-package com.yy.di.bean;
+package com.yy.common.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,22 +8,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /***
  ** @Author JosonLiu
- ** @Date 2016年9月11日
+ ** @Date 2016年12月14日
  ** @Version 1.0
  **/
-@ContextConfiguration("classpath:spring/appContext.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-public class UserTest {
+@ContextConfiguration("classpath:spring/appContext.xml")
+public class CycleServiceTest {
 	@Autowired
-	private UserDemo user;
-	/**
-	 * 测试 通过 XML 进行 Bean 注解   
-	 */
+	private CycleService1 cycleService1;
+	@Autowired
+	private CycleService2 cycleService2;
 	@Test
-	public void test_GetUser(){
-		user.setUid(50075120);
-		user.setUserName("JosonLiu");
-		System.out.println(user);
+	public void test_cycleDependency(){
+		//cycleService2.print();
 	}
+	
 }
 

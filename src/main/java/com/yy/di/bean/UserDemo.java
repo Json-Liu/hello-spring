@@ -4,7 +4,7 @@ package com.yy.di.bean;
  ** @Date 2016年9月11日
  ** @Version 1.0
  **/
-public class User {
+public class UserDemo {
 	private Integer uid ;
 	public Integer getUid() {
 		return uid;
