@@ -16,7 +16,7 @@
 	<!-- Spring bootstrap config, only use this file in code should be sufficient -->
 	<!-- ======================================================================== -->
 	<import resource="classpath:spring/appContext-*.xml"/>
-
+	<bean id = "user" class = "com.yy.bean.User"></bean>
 	<bean id = "userDemo" class = "com.yy.di.bean.UserDemo" > </bean>
 	<bean id = "userWithProperty" class = "com.yy.di.bean.UserWithProperty"  >
 		<property name="uid">
@@ -58,4 +58,5 @@
 	<context:component-scan base-package="com.yy" />
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<context:annotation-config />
+	<bean class="org.springframework.retry.annotation.RetryConfiguration" />
 </beans>
